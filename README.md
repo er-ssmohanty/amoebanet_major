@@ -3,6 +3,7 @@ AmoebaNet: Finding the best Neural Architecture for Thermogram and Mammogram
 
 AmoebaNet is an neural architecture search algorithm that was introduced in the paper "Real-time Neural Architecture Search on Mobile GPUs" by Google Brain. It is a highly efficient and scalable architecture search method for image classification problems. 
 
+
 Project Organization
 ------------
 
