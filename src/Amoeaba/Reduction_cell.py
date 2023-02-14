@@ -1,3 +1,5 @@
+from src.Amoeaba import ImportAll
+
 def reduction_cell(cell_base_depth, cell_growth_rate, reduction_cell_multiplier, filters_factor,
                    weight_decay, dropout_rate, reduction_cell_groups):
     
