@@ -1,8 +1,8 @@
 from Amoeaba import ImportAll
 #from src.Amoeaba import ImportAll
 # Set up the input shape and number of classes
-input_shape = (32, 32, 3)
-n_classes = 10
+input_shape = (256, 256, 1)
+n_classes = 2
 
 # Set up the hyperparameters
 stem_multiplier = 3
@@ -32,13 +32,13 @@ model.compile(optimizer=optimizer, loss=loss, metrics=metrics)
 
 train_dir=""
 model_save_dir=""
-train_data=
-test_data=
+
+train_data,validation_data=get_data(train_dir,train_dir)
 # Train the model
-model.fit(data_augmentation(x_train), y_train, batch_size=batch_size, epochs=epochs, validation_split=0.1)
+history=model.fit(train_data, epochs=epochs, verbose=1,validation_data=validation_data)
 
 # Evaluate the model
-test_loss, test_acc = model.evaluate(x_test, y_test, verbose=2)
+test_acc = history.history['val_accuracy'][len(history.history['val_accuracy'])-1]
 print("Test accuracy:", test_acc)
 
 model.save(model_save_dir)
