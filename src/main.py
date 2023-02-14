@@ -30,17 +30,10 @@ loss = ImportAll.losses.CategoricalCrossentropy()
 metrics = [ImportAll.metrics.CategoricalAccuracy()]
 model.compile(optimizer=optimizer, loss=loss, metrics=metrics)
 
-# Load the CIFAR-10 dataset
-(x_train, y_train), (x_test, y_test) = ImportAll.datasets.cifar10.load_data()
-y_train = ImportAll.utils.to_categorical(y_train, num_classes=n_classes)
-y_test = ImportAll.utils.to_categorical(y_test, num_classes=n_classes)
-
-# Data augmentation
-data_augmentation = ImportAll.Sequential([
-    layers.experimental.preprocessing.RandomFlip("horizontal"),
-    layers.experimental.preprocessing.RandomRotation(0.1),
-])
-
+train_dir=""
+model_save_dir=""
+train_data=
+test_data=
 # Train the model
 model.fit(data_augmentation(x_train), y_train, batch_size=batch_size, epochs=epochs, validation_split=0.1)
 
@@ -48,4 +41,4 @@ model.fit(data_augmentation(x_train), y_train, batch_size=batch_size, epochs=epo
 test_loss, test_acc = model.evaluate(x_test, y_test, verbose=2)
 print("Test accuracy:", test_acc)
 
-model.save("../models/amoebanet_creation_0")
+model.save(model_save_dir)
