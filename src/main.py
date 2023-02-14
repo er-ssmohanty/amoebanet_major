@@ -1,4 +1,4 @@
-from Amoeaba import ImportAll
+from Amoeba import ImportAll
 #from src.Amoeaba import ImportAll
 # Set up the input shape and number of classes
 input_shape = (256, 256, 1)

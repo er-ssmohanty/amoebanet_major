@@ -1,5 +1,5 @@
-from Amoeaba.ImportAll import *
-#from src.Amoeaba import ImportAll
+from Amoeba.ImportAll import *
+#from src.Amoeba import ImportAll
 
 def reduction_cell(input_tensor, cell_base_depth, cell_growth_rate, reduction_cell_multiplier, filters_factor,
                    weight_decay, dropout_rate, reduction_cell_groups):

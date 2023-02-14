@@ -1,4 +1,4 @@
-from Amoeaba.ImportAll import *
+from Amoeba.ImportAll import *
 
 def get_data(train_dir,validation_dir,batch_size=64,test_train_split=0.2):
     train_data = image_dataset_from_directory(\

@@ -1,4 +1,4 @@
-from Amoeaba import ImportAll
+from Amoeba import ImportAll
 #from src.Amoeaba import ImportAll
 
 def normal_cell(reduction_outputs, cell_base_depth, cell_growth_rate, normal_cell_multiplier, filters_factor, weight_decay, dropout_rate, normal_cell_groups):

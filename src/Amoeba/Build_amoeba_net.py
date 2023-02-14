@@ -1,4 +1,4 @@
-from Amoeaba import ImportAll
+from Amoeba import ImportAll
 #from src.Amoeaba import ImportAll
 
 def build_amoeba_net(input_shape, n_classes, stem_fn, cell_base_depth=32, cell_growth_rate=32,

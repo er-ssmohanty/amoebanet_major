@@ -6,13 +6,13 @@ from keras.models import Model
 from keras.preprocessing.image import ImageDataGenerator
 from tensorflow.keras.preprocessing import image_dataset_from_directory
 
-from Amoeaba.Normal_cell import *
-from Amoeaba.Build_amoeba_net import *
-from Amoeaba.Reduction_cell import *
-from Amoeaba.Stem import *
-from Amoeaba.Getdata import *
+from Amoeba.Normal_cell import *
+from Amoeba.Build_amoeba_net import *
+from Amoeba.Reduction_cell import *
+from Amoeba.Stem import *
+from Amoeba.Getdata import *
 
-#from src.Amoeaba.Normal_cell import *
-#from src.Amoeaba.Build_amoeba_net import *
-#from src.Amoeaba.Reduction_cell import *
-#from src.Amoeaba.Stem import *
+#from src.Amoeba.Normal_cell import *
+#from src.Amoeba.Build_amoeba_net import *
+#from src.Amoeba.Reduction_cell import *
+#from src.Amoeba.Stem import *

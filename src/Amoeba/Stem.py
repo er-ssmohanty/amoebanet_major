@@ -1,4 +1,4 @@
-from Amoeaba.ImportAll import *
+from Amoeba.ImportAll import *
 #from src.Amoeaba import ImportAll
 
 #from tensorflow.keras.layers import Conv2D, BatchNormalization, Activation, MaxPooling2D
