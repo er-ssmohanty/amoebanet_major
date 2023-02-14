@@ -20,23 +20,23 @@ batch_size = 128
 epochs = 100
 
 # Build the model
-model = build_amoeba_net(input_shape, n_classes, stem_multiplier, cell_base_depth, cell_growth_rate,
+model = ImportAll.build_amoeba_net(input_shape, n_classes, stem_multiplier, cell_base_depth, cell_growth_rate,
                          reduction_cell_groups, reduction_cell_multiplier, normal_cell_groups,
                          normal_cell_multiplier, filters_factor, weight_decay, dropout_rate)
 
 # Compile the model
-optimizer = keras.optimizers.Adam(learning_rate=learning_rate)
-loss = keras.losses.CategoricalCrossentropy()
-metrics = [keras.metrics.CategoricalAccuracy()]
+optimizer = ImportAll.optimizers.Adam(learning_rate=learning_rate)
+loss = ImportAll.losses.CategoricalCrossentropy()
+metrics = [ImportAll.metrics.CategoricalAccuracy()]
 model.compile(optimizer=optimizer, loss=loss, metrics=metrics)
 
 # Load the CIFAR-10 dataset
-(x_train, y_train), (x_test, y_test) = keras.datasets.cifar10.load_data()
-y_train = keras.utils.to_categorical(y_train, num_classes=n_classes)
-y_test = keras.utils.to_categorical(y_test, num_classes=n_classes)
+(x_train, y_train), (x_test, y_test) = ImportAll.datasets.cifar10.load_data()
+y_train = ImportAll.utils.to_categorical(y_train, num_classes=n_classes)
+y_test = ImportAll.utils.to_categorical(y_test, num_classes=n_classes)
 
 # Data augmentation
-data_augmentation = keras.Sequential([
+data_augmentation = ImportAll.Sequential([
     layers.experimental.preprocessing.RandomFlip("horizontal"),
     layers.experimental.preprocessing.RandomRotation(0.1),
 ])

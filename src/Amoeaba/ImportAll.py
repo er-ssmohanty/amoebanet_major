@@ -1,6 +1,6 @@
 import keras
 from keras import layers
-from keras.layers import Input, Conv2D, BatchNormalization, Activation, Dropout, Dense, GlobalAveragePooling2D
+from keras.layers import Input, Conv2D, BatchNormalization, Activation, Dropout, Dense, GlobalAveragePooling2D,MaxPooling2D
 from keras.regularizers import l2
 from keras.models import Model
 
