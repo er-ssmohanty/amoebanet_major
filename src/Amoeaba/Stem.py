@@ -1,4 +1,5 @@
-from src.Amoeaba import ImportAll
+from Amoeaba import ImportAll
+#from src.Amoeaba import ImportAll
 
 def stem(inputs):
     # First convolutional layer

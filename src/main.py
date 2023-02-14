@@ -1,4 +1,5 @@
-from src.Amoeaba import ImportAll
+from Amoeaba import ImportAll
+#from src.Amoeaba import ImportAll
 # Set up the input shape and number of classes
 input_shape = (32, 32, 3)
 n_classes = 10
