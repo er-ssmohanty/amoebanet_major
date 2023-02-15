@@ -1,0 +1,16 @@
+2023-02-15 12:46:01.295106: W tensorflow/tsl/framework/cpu_allocator_impl.cc:82] Allocation of 618475290624 exceeds 10% of free system memory.
+2023-02-15 12:46:01.295206: W tensorflow/core/framework/op_kernel.cc:1830] OP_REQUIRES failed at stateless_random_ops_v2.cc:67 : RESOURCE_EXHAUSTED: OOM when allocating tensor with shape[3,3,131072,131072] and type float on /job:localhost/replica:0/task:0/device:CPU:0 by allocator cpu
+Traceback (most recent call last):
+  File "/home/shubhransu_etc/amoebanet_major/src/main.py", line 23, in <module>
+    model = ImportAll.build_amoeba_net(input_shape, n_classes, stem_multiplier, cell_base_depth, cell_growth_rate,
+  File "/home/shubhransu_etc/amoebanet_major/src/Amoeba/Build_amoeba_net.py", line 13, in build_amoeba_net
+    reduction_outputs = ImportAll.reduction_cell(x, cell_base_depth, cell_growth_rate, reduction_cell_multiplier, filters_factor,
+  File "/home/shubhransu_etc/amoebanet_major/src/Amoeba/Reduction_cell.py", line 28, in reduction_cell
+    x = cell(input_tensor, filters, strides)
+  File "/home/shubhransu_etc/amoebanet_major/src/Amoeba/Reduction_cell.py", line 12, in cell
+    x = Conv2D(filters * filters_factor, (3, 3), strides=strides, padding='same',
+  File "/home/shubhransu_etc/.miniconda3/envs/pyml/lib/python3.10/site-packages/keras/utils/traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/home/shubhransu_etc/.miniconda3/envs/pyml/lib/python3.10/site-packages/keras/backend.py", line 2142, in truncated_normal
+    return tf.random.stateless_truncated_normal(
+tensorflow.python.framework.errors_impl.ResourceExhaustedError: {{function_node __wrapped__StatelessTruncatedNormalV2_device_/job:localhost/replica:0/task:0/device:CPU:0}} OOM when allocating tensor with shape[3,3,131072,131072] and type float on /job:localhost/replica:0/task:0/device:CPU:0 by allocator cpu [Op:StatelessTruncatedNormalV2]
