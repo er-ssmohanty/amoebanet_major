@@ -30,8 +30,8 @@ loss = ImportAll.losses.CategoricalCrossentropy()
 metrics = [ImportAll.metrics.CategoricalAccuracy()]
 model.compile(optimizer=optimizer, loss=loss, metrics=metrics)
 
-train_dir=""
-model_save_dir=""
+train_dir="/home/shubhransu_etc/project_sys22/data/thermogram/train"
+model_save_dir="models/amoebanet_op0"
 
 train_data,validation_data=get_data(train_dir,train_dir)
 # Train the model
